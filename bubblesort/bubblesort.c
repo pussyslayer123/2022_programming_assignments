@@ -5,111 +5,130 @@ main()
 	int a2,b2,c2,d2,e2,f2,g2,h2,i2,j2,k2;
 	int temp;
 	int num;
-	int ascending_exchange_count, descending_exchange_count; //¿À¸§Â÷¼ø, ³»¸²Â÷¼ø È½¼ö ¼¼±â¿ë º¯¼ö 
+	int ascending_exchange_count, descending_exchange_count; //ì˜¤ë¦„ì°¨ìˆœ, ë‚´ë¦¼ì°¨ìˆœ íšŸìˆ˜ ì„¸ê¸°ìš© ë³€ìˆ˜ 
 	
-	printf("10°³ÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. °¢ Á¤¼ö´Â ¶ç¾î¾²±â·Î ±¸ºĞÇÕ´Ï´Ù. \n");
+	printf("10ê°œì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”. ê° ì •ìˆ˜ëŠ” ë„ì–´ì“°ê¸°ë¡œ êµ¬ë¶„í•©ë‹ˆë‹¤. \n");
 	printf(":");
 	scanf("%d %d %d %d %d %d %d %d %d %d", &a1, &b1, &c1, &d1, &e1, &f1, &g1, &h1, &i1, &j1);
     a2=a1, b2=b1, c2=c1, d2=d1, e2=e1, f2=f1, g2=g1, h2=h1, i2=i1, j2=j1;
 	
-	for (num =0 ; num <10 ; num++) // ³»¸²Â÷¼ø ±¸ÇÏ´Â ºÎºĞ 
+	for (num =0 ; num <10 ; num++) // ë‚´ë¦¼ì°¨ìˆœ êµ¬í•˜ëŠ” ë¶€ë¶„ 
 	{
         if (a1 < b1) {
         	temp = a1;
         	a1 = b1;
         	b1 = temp;
+        	descending_exchange_count+1;
     	}
         if (b1 < c1) {
         	temp = b1;
 			b1 = c1;
         	c1 = temp;
+        	descending_exchange_count+1;
      	}
         if (c1 < d1) {
         	temp = c1;
 			c1 = d1;
 			d1 = temp;
+			descending_exchange_count+1;
 		}
 		if (d1 < e1){
 			temp = d1;
 			d1 = e1;
 			e1 = temp;
+			descending_exchange_count+1;
 		}
 		if (e1 < f1){
 			temp = e1;
 			e1 = f1;
 			f1 = temp;
+			descending_exchange_count+1;
 		}
 		if(f1 < g1){
 			temp = f1;
 			f1 = g1;
 			g1 = temp;
+			descending_exchange_count+1;
 		}
 		if(g1 < h1){
 			temp = g1;
 			g1 = h1;
 			h1 = temp;
+			descending_exchange_count+1;
 		}
 		if(h1 < i1){
 			temp = h1;
 			h1 = i1;
 			i1 = temp;
+			descending_exchange_count+1;
 		}
 		if(i1 < j1){
 			temp = i1;
 			i1 = j1;
 			j1 = temp;
+			descending_exchange_count+1;
 		}
     }            
-    printf("³»¸²Â÷¼ø: %d %d %d %d %d %d %d %d %d %d \n", a1,b1,c1,d1,e1,f1,g1,h1,i1,j1); 
+    printf("ë‚´ë¦¼ì°¨ìˆœ: %d %d %d %d %d %d %d %d %d %d \n", a1,b1,c1,d1,e1,f1,g1,h1,i1,j1); 
+	printf("ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬ íšŸìˆ˜: %d \n", descending_exchange_count);
 
-
-	for (num =0 ; num <10 ; num++) // ¿À¸§Â÷¼ø ±¸ÇÏ´Â ºÎºĞ 
+	for (num =0 ; num <10 ; num++) // ì˜¤ë¦„ì°¨ìˆœ êµ¬í•˜ëŠ” ë¶€ë¶„ 
 	{
         if (a2 > b2) {
         	temp = a2;
         	a2 = b2;
         	b2 = temp;
+        	ascending_exchange_count+1;
     	}
         if (b2 > c2) {
         	temp = b2;
 			b2 = c2;
         	c2 = temp;
+        	ascending_exchange_count+1;
      	}
         if (c2 > d2) {
         	temp = c2;
 			c2 = d2;
 			d2 = temp;
+			ascending_exchange_count+1;
 		}
 		if (d2 > e2){
 			temp = d2;
 			d2 = e2;
 			e2 = temp;
+			ascending_exchange_count+1;
 		}
 		if (e2 > f2){
 			temp = e2;
 			e2 = f2;
 			f2 = temp;
+			ascending_exchange_count+1;
 		}
 		if(f2 > g2){
 			temp = f2;
 			f2 = g2;
 			g2 = temp;
+			ascending_exchange_count+1;
 		}
 		if(g2 > h2){
 			temp = g2;
 			g2 = h2;
 			h2 = temp;
+			ascending_exchange_count+1;
 		}
 		if(h2 > i2){
 			temp = h2;
 			h2 = i2;
 			i2 = temp;
+			ascending_exchange_count+1;
 		}
 		if(i2 > j2){
 			temp = i2;
 			i2 = j2;
 			j2 = temp;
+			ascending_exchange_count+1;
 		}
     }            
-    printf("¿À¸§Â÷¼ø: %d %d %d %d %d %d %d %d %d %d", a2,b2,c2,d2,e2,f2,g2,h2,i2,j2);  
+    printf("ì˜¤ë¦„ì°¨ìˆœ: %d %d %d %d %d %d %d %d %d %d \n", a2,b2,c2,d2,e2,f2,g2,h2,i2,j2); 
+	printf("ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ íšŸìˆ˜:%d \n", ascending_exchange_count);
 }
